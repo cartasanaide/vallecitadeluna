@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>vallecita</title>
+    <title>Chat Estilo WhatsApp</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -133,7 +133,7 @@
     </style>
 </head>
 <body>
-    <button class="login-button" id="login-btn" onclick="login()">Iniciar sesion</button>
+    <button class="login-button" id="login-btn" onclick="login()">Iniciar sesión</button>
     
     <div class="chat-container">
         <div class="chat-title" onclick="showInfo()">
@@ -150,10 +150,10 @@
             <input type="text" id="post-input" placeholder="Escribe un mensaje...">
             <input type="file" id="image-input" accept="image/jpeg" onchange="sendImage()">
             <button onclick="sendPost()">Enviar</button>
-            <button class="logout-button" onclick="logout()">Cerrar sesion</button>
+            <button class="logout-button" onclick="logout()">Cerrar sesión</button>
         </div>
         <div class="comment-box" id="comment-box">
-            <p>Por favor, se respetuoso al comentar.</p>
+            <p>Por favor, sé respetuoso al comentar.</p>
             <input type="text" id="username-input" placeholder="Elige un nombre de usuario...">
             <input type="text" id="message-input" placeholder="Escribe un comentario...">
             <button onclick="sendComment()">Comentar</button>
@@ -161,7 +161,7 @@
     </div>
 
     <div class="info-box" id="info-box">
-        <p>Estudiante de turismo, aficionada a la literatura, fotografia, gatitos y mega fan de las telenovelas.</p>
+        <p>Estudiante de turismo, aficionada a la literatura, fotografía, gatitos y mega fan de las telenovelas.</p>
         <button onclick="hideInfo()">Cerrar</button>
     </div>
 
@@ -221,7 +221,7 @@
         }
 
         function sendComment() {
-            let username = document.getElementById("username-input").value.trim() || "An�nimo";
+            let username = document.getElementById("username-input").value.trim() || "Anónimo";
             let input = document.getElementById("message-input");
             let message = input.value.trim();
             if (message !== "") {
@@ -235,7 +235,7 @@
         }
 
         function login() {
-            let password = prompt("Ingresa la contrase�a de creador:");
+            let password = prompt("Ingresa la contraseña de creador:");
             if (password === creatorPassword) {
                 isCreator = true;
                 document.getElementById("post-box").style.display = "flex";
